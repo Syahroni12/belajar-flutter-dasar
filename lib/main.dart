@@ -1,57 +1,25 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(Myapp());
+  runApp(MyApp());
 }
 
-class Myapp extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text("List Tile"),
-        ),
-        body: ListView(
-          children: [
-            ListTile(
-              title: Text("Muhammad Syahroni"),
-              subtitle: Text("Prodi : Teknik Informatika"),
-              leading: CircleAvatar(),
-              trailing: Text("10:00 PM"),
-              tileColor: Colors.red,
-            ),
-            Divider(
-              color: Colors.black,
-            ),
-            ListTile(
-              title: Text("Muhammad Syahroni"),
-              subtitle: Text("Prodi : Teknik Informatika"),
-              leading: CircleAvatar(),
-              trailing: Text("10:00 PM"),
-            ),
-            Divider(
-              color: Colors.black,
-            ),
-            ListTile(
-              title: Text("Muhammad Syahroni"),
-              subtitle: Text("Prodi : Teknik Informatika"),
-              leading: CircleAvatar(),
-              trailing: Text("10:00 PM"),
-            ),
-            Divider(
-              color: Colors.black,
-            ),
-            ListTile(
-              title: Text("Muhammad Syahroni"),
-              subtitle: Text("Prodi : Teknik Informatika"),
-              leading: CircleAvatar(),
-              trailing: Text("10:00 PM"),
-            ),
-            Divider(
-              color: Colors.black,
-            ),
-          ],
+        appBar: AppBar(title: Text("widget Image")),
+        body: Center(
+          child: Container(
+            width: 350,
+            height: 500,
+            color: Colors.blueGrey,
+            child:
+                Image(fit: BoxFit.fill, image: AssetImage("images/ruangan.jpeg")
+                    // image: NetworkImage("https://picsum.photos/350/500"),
+                    ),
+          ),
         ),
       ),
     );
